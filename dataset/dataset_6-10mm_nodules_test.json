@@ -1,0 +1,1154 @@
+[
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.100621383016233746780170740405",
+        "original_center_xyz": [
+            -24.0138242,
+            192.1024053,
+            -391.0812764
+        ],
+        "original_diameter_mm": 8.143261683,
+        "calculated_center_irc": [
+            266,
+            328,
+            173
+        ],
+        "calculated_radius_px": 8,
+        "approx_diameter_mm_from_px": 7.79296875,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.100621383016233746780170740405_266.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.100621383016233746780170740405_266.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.100953483028192176989979435275",
+        "original_center_xyz": [
+            81.50964574,
+            54.9572186,
+            -150.3464233
+        ],
+        "original_diameter_mm": 10.36232088,
+        "calculated_center_irc": [
+            76,
+            289,
+            354
+        ],
+        "calculated_radius_px": 8,
+        "approx_diameter_mm_from_px": 9.84375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.100953483028192176989979435275_76.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.100953483028192176989979435275_76.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.104562737760173137525888934217",
+        "original_center_xyz": [
+            -124.8342624,
+            127.2471546,
+            -473.0644785
+        ],
+        "original_diameter_mm": 10.46585391,
+        "calculated_center_irc": [
+            104,
+            259,
+            118
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 9.9609375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.104562737760173137525888934217_104.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.104562737760173137525888934217_104.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.105495028985881418176186711228",
+        "original_center_xyz": [
+            -106.9013014,
+            21.92298672,
+            -126.9169003
+        ],
+        "original_diameter_mm": 9.745258507,
+        "calculated_center_irc": [
+            89,
+            281,
+            124
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 8.789060115814209,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105495028985881418176186711228_89.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105495028985881418176186711228_89.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.106164978370116976238911317774",
+        "original_center_xyz": [
+            2.263815885,
+            33.52641757,
+            -170.6369497
+        ],
+        "original_diameter_mm": 7.16854239,
+        "calculated_center_irc": [
+            63,
+            310,
+            251
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.25,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.106164978370116976238911317774_63.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.106164978370116976238911317774_63.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.106379658920626694402549886949",
+        "original_center_xyz": [
+            -70.55088903,
+            66.35948368,
+            -160.9429324
+        ],
+        "original_diameter_mm": 6.642184792,
+        "calculated_center_irc": [
+            89,
+            341,
+            166
+        ],
+        "calculated_radius_px": 5,
+        "approx_diameter_mm_from_px": 6.25,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.106379658920626694402549886949_89.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.106379658920626694402549886949_89.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.106630482085576298661469304872",
+        "original_center_xyz": [
+            -96.43953415,
+            9.736190398,
+            -175.0375714
+        ],
+        "original_diameter_mm": 6.753816666,
+        "calculated_center_irc": [
+            69,
+            272,
+            139
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.25,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.106630482085576298661469304872_69.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.106630482085576298661469304872_69.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.107351566259572521472765997306",
+        "original_center_xyz": [
+            -69.12656791,
+            -80.56714288,
+            -189.8066129
+        ],
+        "original_diameter_mm": 8.648009287,
+        "calculated_center_irc": [
+            114,
+            427,
+            133
+        ],
+        "calculated_radius_px": 8,
+        "approx_diameter_mm_from_px": 8.4765625,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.107351566259572521472765997306_114.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.107351566259572521472765997306_114.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.107351566259572521472765997306",
+        "original_center_xyz": [
+            -108.0728115,
+            -147.1544803,
+            -186.0432849
+        ],
+        "original_diameter_mm": 7.285341553,
+        "calculated_center_irc": [
+            117,
+            317,
+            69
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 7.265625,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.107351566259572521472765997306_117.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.107351566259572521472765997306_117.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.107351566259572521472765997306",
+        "original_center_xyz": [
+            82.22918083,
+            -82.37619066,
+            -177.897695
+        ],
+        "original_diameter_mm": 6.140896043,
+        "calculated_center_irc": [
+            126,
+            424,
+            383
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.0546875,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.107351566259572521472765997306_126.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.107351566259572521472765997306_126.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.111258527162678142285870245028",
+        "original_center_xyz": [
+            -80.95185933,
+            10.34287843,
+            -28.39915701
+        ],
+        "original_diameter_mm": 9.454440433,
+        "calculated_center_irc": [
+            229,
+            311,
+            167
+        ],
+        "calculated_radius_px": 8,
+        "approx_diameter_mm_from_px": 8.75,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111258527162678142285870245028_229.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111258527162678142285870245028_229.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.112767175295249119452142211437",
+        "original_center_xyz": [
+            42.29613347,
+            56.15173475,
+            -84.66166226
+        ],
+        "original_diameter_mm": 6.47796611,
+        "calculated_center_irc": [
+            91,
+            328,
+            320
+        ],
+        "calculated_radius_px": 5,
+        "approx_diameter_mm_from_px": 6.25,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.112767175295249119452142211437_91.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.112767175295249119452142211437_91.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.112767175295249119452142211437",
+        "original_center_xyz": [
+            99.37468119,
+            23.94678445,
+            -138.5658318
+        ],
+        "original_diameter_mm": 9.104624209,
+        "calculated_center_irc": [
+            69,
+            287,
+            393
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 7.8125,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.112767175295249119452142211437_69.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.112767175295249119452142211437_69.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.114218724025049818743426522343",
+        "original_center_xyz": [
+            -127.5329894,
+            -29.60790208,
+            -253.6976163
+        ],
+        "original_diameter_mm": 8.269325422,
+        "calculated_center_irc": [
+            134,
+            214,
+            111
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 7.03125,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.114218724025049818743426522343_134.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.114218724025049818743426522343_134.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.114218724025049818743426522343",
+        "original_center_xyz": [
+            75.45450371,
+            7.903213687,
+            -194.3685225
+        ],
+        "original_diameter_mm": 7.6317087,
+        "calculated_center_irc": [
+            229,
+            267,
+            400
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 7.03125,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.114218724025049818743426522343_229.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.114218724025049818743426522343_229.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.114914167428485563471327801935",
+        "original_center_xyz": [
+            -34.49722741,
+            -9.311874316,
+            -37.44756628
+        ],
+        "original_diameter_mm": 7.360638607,
+        "calculated_center_irc": [
+            404,
+            240,
+            207
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 7.031255722045898,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.114914167428485563471327801935_404.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.114914167428485563471327801935_404.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.117040183261056772902616195387",
+        "original_center_xyz": [
+            88.25600165,
+            230.5158009,
+            -623.295922
+        ],
+        "original_diameter_mm": 9.011764374,
+        "calculated_center_irc": [
+            75,
+            401,
+            381
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 8.30078125,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.117040183261056772902616195387_75.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.117040183261056772902616195387_75.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.117040183261056772902616195387",
+        "original_center_xyz": [
+            55.71446565,
+            190.7603968,
+            -579.6542959
+        ],
+        "original_diameter_mm": 10.88873794,
+        "calculated_center_irc": [
+            119,
+            353,
+            342
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 9.9609375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.117040183261056772902616195387_119.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.117040183261056772902616195387_119.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.118140393257625250121502185026",
+        "original_center_xyz": [
+            -63.09760599,
+            -56.55503154,
+            -332.9778338
+        ],
+        "original_diameter_mm": 10.33318806,
+        "calculated_center_irc": [
+            46,
+            397,
+            181
+        ],
+        "calculated_radius_px": 8,
+        "approx_diameter_mm_from_px": 9.84375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.118140393257625250121502185026_46.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.118140393257625250121502185026_46.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.118140393257625250121502185026",
+        "original_center_xyz": [
+            -164.3510309,
+            -136.6619593,
+            -301.5817285
+        ],
+        "original_diameter_mm": 9.220611088,
+        "calculated_center_irc": [
+            63,
+            283,
+            37
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 8.4375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.118140393257625250121502185026_63.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.118140393257625250121502185026_63.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.119209873306155771318545953948",
+        "original_center_xyz": [
+            -28.36728411,
+            -82.21130866,
+            -206.4823356
+        ],
+        "original_diameter_mm": 6.607863144,
+        "calculated_center_irc": [
+            198,
+            154,
+            202
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.445310115814209,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.119209873306155771318545953948_198.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.119209873306155771318545953948_198.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.124663713663969377020085460568",
+        "original_center_xyz": [
+            -86.7371531,
+            50.43512096,
+            -156.612762
+        ],
+        "original_diameter_mm": 9.259814,
+        "calculated_center_irc": [
+            89,
+            356,
+            155
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 8.59375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124663713663969377020085460568_89.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124663713663969377020085460568_89.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354",
+        "original_center_xyz": [
+            59.1141461,
+            -158.5772534,
+            -118.037336
+        ],
+        "original_diameter_mm": 6.720277435,
+        "calculated_center_irc": [
+            525,
+            264,
+            366
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.07421875,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_525.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_525.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.126631670596873065041988320084",
+        "original_center_xyz": [
+            44.01647614,
+            -7.920203139,
+            -249.6876651
+        ],
+        "original_diameter_mm": 7.60446251,
+        "calculated_center_irc": [
+            84,
+            232,
+            348
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 7.421879768371582,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126631670596873065041988320084_84.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126631670596873065041988320084_84.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.127965161564033605177803085629",
+        "original_center_xyz": [
+            97.49024191,
+            28.55020986,
+            -160.5336443
+        ],
+        "original_diameter_mm": 8.842809348,
+        "calculated_center_irc": [
+            111,
+            259,
+            105
+        ],
+        "calculated_radius_px": 8,
+        "approx_diameter_mm_from_px": 8.777342081069946,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.127965161564033605177803085629_111.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.127965161564033605177803085629_111.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.128023902651233986592378348912",
+        "original_center_xyz": [
+            33.83282599,
+            88.41158995,
+            -101.7804814
+        ],
+        "original_diameter_mm": 10.4626083,
+        "calculated_center_irc": [
+            101,
+            382,
+            323
+        ],
+        "calculated_radius_px": 8,
+        "approx_diameter_mm_from_px": 9.84375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.128023902651233986592378348912_101.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.128023902651233986592378348912_101.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.128059192202504367870633619224",
+        "original_center_xyz": [
+            69.52897275,
+            -24.4152887,
+            -137.8211351
+        ],
+        "original_diameter_mm": 7.035809202,
+        "calculated_center_irc": [
+            96,
+            221,
+            351
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 7.03125,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.128059192202504367870633619224_96.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.128059192202504367870633619224_96.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.129055977637338639741695800950",
+        "original_center_xyz": [
+            -96.46930419,
+            -88.12896199,
+            1131.113774
+        ],
+        "original_diameter_mm": 6.800248866,
+        "calculated_center_irc": [
+            370,
+            354,
+            117
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.171875,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.129055977637338639741695800950_370.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.129055977637338639741695800950_370.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.131939324905446238286154504249",
+        "original_center_xyz": [
+            -59.72321708,
+            84.839226,
+            1368.370353
+        ],
+        "original_diameter_mm": 9.769564126,
+        "calculated_center_irc": [
+            40,
+            369,
+            168
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 8.891999959945679,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.131939324905446238286154504249_40.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.131939324905446238286154504249_40.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.132817748896065918417924920957",
+        "original_center_xyz": [
+            74.2822796,
+            57.09404849,
+            -122.279633
+        ],
+        "original_diameter_mm": 6.70661454,
+        "calculated_center_irc": [
+            84,
+            356,
+            371
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.25,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.132817748896065918417924920957_84.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.132817748896065918417924920957_84.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.134370886216012873213579659366",
+        "original_center_xyz": [
+            -61.47472636,
+            -140.3727694,
+            -59.31736202
+        ],
+        "original_diameter_mm": 9.326384983,
+        "calculated_center_irc": [
+            171,
+            308,
+            166
+        ],
+        "calculated_radius_px": 9,
+        "approx_diameter_mm_from_px": 9.0625,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.134370886216012873213579659366_171.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.134370886216012873213579659366_171.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.134519406153127654901640638633",
+        "original_center_xyz": [
+            -35.51923634,
+            40.34791487,
+            -72.19348873
+        ],
+        "original_diameter_mm": 7.183794081,
+        "calculated_center_irc": [
+            231,
+            308,
+            216
+        ],
+        "calculated_radius_px": 5,
+        "approx_diameter_mm_from_px": 6.25,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.134519406153127654901640638633_231.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.134519406153127654901640638633_231.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.134996872583497382954024478441",
+        "original_center_xyz": [
+            -84.04658072,
+            -42.01536028,
+            -146.8074
+        ],
+        "original_diameter_mm": 7.053719722,
+        "calculated_center_irc": [
+            101,
+            207,
+            179
+        ],
+        "calculated_radius_px": 5,
+        "approx_diameter_mm_from_px": 6.875,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.134996872583497382954024478441_101.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.134996872583497382954024478441_101.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.134996872583497382954024478441",
+        "original_center_xyz": [
+            -70.32309853,
+            56.20438421,
+            -82.47945755
+        ],
+        "original_diameter_mm": 7.888814398,
+        "calculated_center_irc": [
+            153,
+            321,
+            195
+        ],
+        "calculated_radius_px": 5,
+        "approx_diameter_mm_from_px": 6.875,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.134996872583497382954024478441_153.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.134996872583497382954024478441_153.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.134996872583497382954024478441",
+        "original_center_xyz": [
+            -86.85384308,
+            15.04157401,
+            -72.32680955
+        ],
+        "original_diameter_mm": 9.25825997,
+        "calculated_center_irc": [
+            161,
+            274,
+            176
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 8.59375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.134996872583497382954024478441_161.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.134996872583497382954024478441_161.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.137773550852881583165286615668",
+        "original_center_xyz": [
+            57.17854367,
+            -191.0388202,
+            182.1082155
+        ],
+        "original_diameter_mm": 10.07596577,
+        "calculated_center_irc": [
+            207,
+            234,
+            366
+        ],
+        "calculated_radius_px": 9,
+        "approx_diameter_mm_from_px": 9.59375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.137773550852881583165286615668_207.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.137773550852881583165286615668_207.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.138080888843357047811238713686",
+        "original_center_xyz": [
+            -120.9836813,
+            177.1711523,
+            -530.9680868
+        ],
+        "original_diameter_mm": 6.921521943,
+        "calculated_center_irc": [
+            125,
+            318,
+            59
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.81640625,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.138080888843357047811238713686_125.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.138080888843357047811238713686_125.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.139258777898746693365877042411",
+        "original_center_xyz": [
+            -108.127825,
+            -176.5624058,
+            -192.9633399
+        ],
+        "original_diameter_mm": 8.621579517,
+        "calculated_center_irc": [
+            286,
+            204,
+            96
+        ],
+        "calculated_radius_px": 9,
+        "approx_diameter_mm_from_px": 8.21875,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.139258777898746693365877042411_286.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.139258777898746693365877042411_286.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.140253591510022414496468423138",
+        "original_center_xyz": [
+            -108.0334716,
+            59.54355435,
+            -256.4077135
+        ],
+        "original_diameter_mm": 8.437996083,
+        "calculated_center_irc": [
+            29,
+            331,
+            110
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 7.421879768371582,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.140253591510022414496468423138_29.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.140253591510022414496468423138_29.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.141511313712034597336182402384",
+        "original_center_xyz": [
+            -71.71034314,
+            -51.03435569,
+            -60.04814098
+        ],
+        "original_diameter_mm": 6.288178284,
+        "calculated_center_irc": [
+            409,
+            151,
+            164
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.054689884185791,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.141511313712034597336182402384_409.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.141511313712034597336182402384_409.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.142154819868944114554521645782",
+        "original_center_xyz": [
+            37.0690484,
+            -156.5575996,
+            959.5810338
+        ],
+        "original_diameter_mm": 7.3033558,
+        "calculated_center_irc": [
+            375,
+            213,
+            332
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 6.609375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.142154819868944114554521645782_375.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.142154819868944114554521645782_375.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.145759169833745025756371695397",
+        "original_center_xyz": [
+            -75.29240495,
+            21.15278462,
+            -199.692606
+        ],
+        "original_diameter_mm": 6.896207561,
+        "calculated_center_irc": [
+            37,
+            260,
+            151
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.25,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.145759169833745025756371695397_37.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.145759169833745025756371695397_37.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.147250707071097813243473865421",
+        "original_center_xyz": [
+            84.43809487,
+            41.64011864,
+            -38.62495844
+        ],
+        "original_diameter_mm": 6.45617819,
+        "calculated_center_irc": [
+            416,
+            269,
+            361
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.445310115814209,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.147250707071097813243473865421_416.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.147250707071097813243473865421_416.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.148447286464082095534651426689",
+        "original_center_xyz": [
+            -119.2839541,
+            -23.22368795,
+            -110.8177161
+        ],
+        "original_diameter_mm": 8.679781517,
+        "calculated_center_irc": [
+            158,
+            289,
+            376
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 8.4375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.148447286464082095534651426689_158.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.148447286464082095534651426689_158.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.149463915556499304732434215056",
+        "original_center_xyz": [
+            -78.27791848,
+            -61.2505383,
+            -147.0934292
+        ],
+        "original_diameter_mm": 7.065657802,
+        "calculated_center_irc": [
+            75,
+            164,
+            139
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.640620231628418,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.149463915556499304732434215056_75.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.149463915556499304732434215056_75.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.150097650621090951325113116280",
+        "original_center_xyz": [
+            38.14941728,
+            1.80271657,
+            -70.90735161
+        ],
+        "original_diameter_mm": 7.047024057,
+        "calculated_center_irc": [
+            80,
+            266,
+            310
+        ],
+        "calculated_radius_px": 5,
+        "approx_diameter_mm_from_px": 6.562496185302734,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.150097650621090951325113116280_80.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.150097650621090951325113116280_80.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.150684298696437181894923266019",
+        "original_center_xyz": [
+            -114.0871448,
+            -229.0544486,
+            -171.1804677
+        ],
+        "original_diameter_mm": 6.346289783,
+        "calculated_center_irc": [
+            94,
+            213,
+            123
+        ],
+        "calculated_radius_px": 5,
+        "approx_diameter_mm_from_px": 6.09375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.150684298696437181894923266019_94.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.150684298696437181894923266019_94.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.151764021165118974848436095034",
+        "original_center_xyz": [
+            -50.50497575,
+            124.8450856,
+            -550.3697203
+        ],
+        "original_diameter_mm": 6.867096006,
+        "calculated_center_irc": [
+            185,
+            182,
+            142
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.77734375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.151764021165118974848436095034_185.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.151764021165118974848436095034_185.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.153536305742006952753134773630",
+        "original_center_xyz": [
+            104.3942446,
+            -9.972464082,
+            -183.3350265
+        ],
+        "original_diameter_mm": 9.843747171,
+        "calculated_center_irc": [
+            81,
+            239,
+            424
+        ],
+        "calculated_radius_px": 9,
+        "approx_diameter_mm_from_px": 9.375007629394531,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.153536305742006952753134773630_81.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.153536305742006952753134773630_81.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.153732973534937692357111055819",
+        "original_center_xyz": [
+            90.76420042,
+            13.42579202,
+            -161.1894594
+        ],
+        "original_diameter_mm": 6.901543658,
+        "calculated_center_irc": [
+            95,
+            275,
+            380
+        ],
+        "calculated_radius_px": 5,
+        "approx_diameter_mm_from_px": 6.562496185302734,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.153732973534937692357111055819_95.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.153732973534937692357111055819_95.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.154837327827713479309898027966",
+        "original_center_xyz": [
+            -73.74416699,
+            36.34720067,
+            -146.6572802
+        ],
+        "original_diameter_mm": 7.125812147,
+        "calculated_center_irc": [
+            135,
+            310,
+            142
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.7382800579071045,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.154837327827713479309898027966_135.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.154837327827713479309898027966_135.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.160124400349792614505500125883",
+        "original_center_xyz": [
+            -48.73057191,
+            19.90509306,
+            -97.41971618
+        ],
+        "original_diameter_mm": 7.765435432,
+        "calculated_center_irc": [
+            101,
+            278,
+            196
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 7.148436069488525,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.160124400349792614505500125883_101.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.160124400349792614505500125883_101.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.160586340600816116143631200450",
+        "original_center_xyz": [
+            -58.64456388,
+            29.43795597,
+            -78.8440923
+        ],
+        "original_diameter_mm": 8.742043676,
+        "calculated_center_irc": [
+            100,
+            303,
+            146
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 7.5,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.160586340600816116143631200450_100.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.160586340600816116143631200450_100.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.161067514225109999586362698069",
+        "original_center_xyz": [
+            39.29726212,
+            69.52841861,
+            -210.5451848
+        ],
+        "original_diameter_mm": 9.759961201,
+        "calculated_center_irc": [
+            80,
+            304,
+            305
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 8.261719942092896,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161067514225109999586362698069_80.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161067514225109999586362698069_80.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805",
+        "original_center_xyz": [
+            -105.4187651,
+            250.8183267,
+            -624.2090569
+        ],
+        "original_diameter_mm": 9.359117475,
+        "calculated_center_irc": [
+            102,
+            382,
+            141
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 7.8125,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805_102.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805_102.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805",
+        "original_center_xyz": [
+            -53.4094697,
+            239.4490175,
+            -635.4941475
+        ],
+        "original_diameter_mm": 9.376296072,
+        "calculated_center_irc": [
+            91,
+            367,
+            208
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 9.375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805_91.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805_91.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805",
+        "original_center_xyz": [
+            57.83232025,
+            268.8908598,
+            -646.4639133
+        ],
+        "original_diameter_mm": 8.15237846,
+        "calculated_center_irc": [
+            80,
+            405,
+            350
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 7.8125,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805_80.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805_80.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805",
+        "original_center_xyz": [
+            122.4122106,
+            165.6107352,
+            -683.3834284
+        ],
+        "original_diameter_mm": 7.428430647,
+        "calculated_center_irc": [
+            43,
+            273,
+            433
+        ],
+        "calculated_radius_px": 5,
+        "approx_diameter_mm_from_px": 6.25,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805_43.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805_43.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805",
+        "original_center_xyz": [
+            36.17618311,
+            271.405521,
+            -690.7770874
+        ],
+        "original_diameter_mm": 9.421061711,
+        "calculated_center_irc": [
+            36,
+            408,
+            322
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 9.375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805_36.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.161855583909753609742728521805_36.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.162351539386551708034407968929",
+        "original_center_xyz": [
+            116.2254123,
+            -173.5753534,
+            -162.7195162
+        ],
+        "original_diameter_mm": 7.318099839,
+        "calculated_center_irc": [
+            125,
+            217,
+            447
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 7.265625,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.162351539386551708034407968929_125.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.162351539386551708034407968929_125.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.162718361851587451505896742103",
+        "original_center_xyz": [
+            -25.82864181,
+            -91.1680942,
+            -200.1866058
+        ],
+        "original_diameter_mm": 9.587295623,
+        "calculated_center_irc": [
+            75,
+            155,
+            227
+        ],
+        "calculated_radius_px": 7,
+        "approx_diameter_mm_from_px": 8.4375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.162718361851587451505896742103_75.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.162718361851587451505896742103_75.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.162845309248822193437735868939",
+        "original_center_xyz": [
+            17.29473579,
+            -80.60955607,
+            -181.4152216
+        ],
+        "original_diameter_mm": 9.562175963,
+        "calculated_center_irc": [
+            501,
+            394,
+            295
+        ],
+        "calculated_radius_px": 8,
+        "approx_diameter_mm_from_px": 9.05078125,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.162845309248822193437735868939_501.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.162845309248822193437735868939_501.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.162901839201654862079549658100",
+        "original_center_xyz": [
+            76.6376056,
+            -68.3923344,
+            -220.5859873
+        ],
+        "original_diameter_mm": 6.940547015,
+        "calculated_center_irc": [
+            94,
+            379,
+            384
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.0546875,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.162901839201654862079549658100_94.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.162901839201654862079549658100_94.txt"
+    },
+    {
+        "seriesuid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.164988920331211858091402361989",
+        "original_center_xyz": [
+            -89.50837321,
+            -219.1764409,
+            -204.1231254
+        ],
+        "original_diameter_mm": 6.908606934,
+        "calculated_center_irc": [
+            266,
+            152,
+            117
+        ],
+        "calculated_radius_px": 6,
+        "approx_diameter_mm_from_px": 6.09375,
+        "image_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.164988920331211858091402361989_266.jpg",
+        "annotation_path": "/content/drive/MyDrive/TCC/Luna/test_organized/6-10mm/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.164988920331211858091402361989_266.txt"
+    }
+]
