@@ -7,7 +7,8 @@ import torch
 import json
 from PIL import Image
 import numpy as np
-from transformers import ConvNextV2ForImageClassification, AutoImageProcessor
+from transformers import ConvNextV2ForImageClassification
+import torchvision.transforms as transforms
 from datetime import datetime
 import argparse
 
@@ -51,12 +52,12 @@ class LunaNodeDetector:
         self.model.to(self.device)
         self.model.eval()
         
-        # Processador de imagem
-        self.processor = AutoImageProcessor.from_pretrained(
-            "facebook/convnextv2-tiny-1k-224",
-            do_rescale=True,
-            do_normalize=True
-        )
+        # Custom transforms para manter 1 canal (grayscale)
+        self.transform = transforms.Compose([
+            transforms.Resize((224, 224)),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=[0.5], std=[0.5])  # Normalização para 1 canal
+        ])
         
         # Informacoes do checkpoint
         self.checkpoint_info = {
@@ -83,14 +84,12 @@ class LunaNodeDetector:
         Returns:
             dict: Resultado da predicao
         """
-        # Carregar e preprocessar imagem
-        # Processamento correto: L -> RGB (mesmo do treinamento)
+        # Carregar e preprocessar imagem (manter 1 canal)
         img = Image.open(image_path).convert('L')  # Grayscale
-        image = img.convert('RGB')  # Converter para RGB
         
-        # Processar
-        inputs = self.processor(image, return_tensors="pt")
-        pixel_values = inputs['pixel_values'].to(self.device)
+        # Aplicar transforms customizadas (mantém 1 canal)
+        pixel_values = self.transform(img).unsqueeze(0)  # Add batch dimension
+        pixel_values = pixel_values.to(self.device)
         
         # Predicao
         with torch.no_grad():
@@ -132,17 +131,15 @@ class LunaNodeDetector:
         for i in range(0, len(image_paths), batch_size):
             batch_paths = image_paths[i:i + batch_size]
             
-            # Carregar e processar imagens
-            images = []
+            # Carregar e processar imagens (manter 1 canal)
+            batch_tensors = []
             for path in batch_paths:
-                # Processamento correto: L -> RGB (mesmo do treinamento)
-                img = Image.open(path).convert('L')
-                image = img.convert('RGB')
-                images.append(image)
+                img = Image.open(path).convert('L')  # Grayscale
+                tensor = self.transform(img)
+                batch_tensors.append(tensor)
             
-            # Processar lote
-            inputs = self.processor(images, return_tensors="pt")
-            pixel_values = inputs['pixel_values'].to(self.device)
+            # Criar batch tensor
+            pixel_values = torch.stack(batch_tensors).to(self.device)
             
             # Predicao
             with torch.no_grad():
