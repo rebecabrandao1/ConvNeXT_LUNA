@@ -1,6 +1,6 @@
 ### Para rodar
 
-# 0. Criar ambiente virtual
+# 1. Criar ambiente virtual
 ```bash
 python -m venv luna_env
 
@@ -11,24 +11,13 @@ luna_env\Scripts\activate
 source luna_env/bin/activate
 ```
 
-# 1. Instalar dependências
+# 2. Instalar dependências
 ```bash
 pip install -r requirements.txt
 ```
 
-# 2. Configurar dados (SERVIDOR)
-```bash
-# Opção A: Setup automático
-chmod +x setup_data.sh && ./setup_data.sh
-
-# Opção B: Download direto LUNA16 (se disponível)
-chmod +x download_luna16.sh && ./download_luna16.sh
-
-# Opção C: Transfer manual
-# Transfira seus dados para ~/luna_data/
-scp -r dataset_balanced/ usuario@servidor:~/luna_data/
-scp -r subsets/ usuario@servidor:~/luna_data/
-```
+# 3. Configurar dados (SERVIDOR)
+nessa hora é só descompactar o zip com os datasets
 
 # 3. Processar dados 
 ```bash 
@@ -63,7 +52,7 @@ python graficos_metricas.py
 python metricas_map50.py
 ```
 
-## 📊 Estrutura de Dados
+## Estrutura do projeto
 
 ### No Desenvolvimento (Local):
 ```
