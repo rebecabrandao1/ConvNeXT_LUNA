@@ -10,7 +10,12 @@ import matplotlib
 matplotlib.use('Agg')  # Backend nao-interativo para servidor
 import matplotlib.pyplot as plt
 from PIL import Image, ImageDraw, ImageFont
-from use_model_servidor import LunaNodeDetector
+# Import robusto do detector
+try:
+    from use_model import LunaNodeDetector
+except Exception:
+    # Fallback antigo (caso exista em outro ambiente)
+    from use_model_servidor import LunaNodeDetector  # type: ignore
 import json
 from datetime import datetime
 import argparse
@@ -47,22 +52,50 @@ class VisualizadorServidor:
         Returns:
             dict: Resultado + caminho da visualizacao
         """
+        if not os.path.isfile(caminho_imagem):
+            print(f"[IGNORADO] Arquivo não encontrado: {caminho_imagem}")
+            return {
+                'resultado': None,
+                'ground_truth': [],
+                'visualizacao': None
+            }
+
         print(f"Analisando: {os.path.basename(caminho_imagem)}")
         
         # 1. Fazer predicao
-        resultado = self.detector.predict_image(caminho_imagem)
+        try:
+            resultado = self.detector.predict_image(caminho_imagem)
+        except Exception as e:
+            print(f"[ERRO] Falha na predição para {caminho_imagem}: {e}")
+            return {
+                'resultado': None,
+                'ground_truth': [],
+                'visualizacao': None
+            }
         
         # 2. Carregar ground truth
         ground_truth = self._carregar_ground_truth(caminho_imagem)
         
         # 3. Carregar imagem
-        img_cv = cv2.imread(caminho_imagem)
-        if img_cv is None:
-            # Tentar como PIL se OpenCV falhar
-            img_pil = Image.open(caminho_imagem).convert('RGB')
-            img_rgb = np.array(img_pil)
-        else:
-            img_rgb = cv2.cvtColor(img_cv, cv2.COLOR_BGR2RGB)
+        img_rgb = None
+        try:
+            img_cv = cv2.imread(caminho_imagem, cv2.IMREAD_COLOR)
+            if img_cv is not None:
+                img_rgb = cv2.cvtColor(img_cv, cv2.COLOR_BGR2RGB)
+        except Exception:
+            img_cv = None
+
+        if img_rgb is None:
+            try:
+                img_pil = Image.open(caminho_imagem).convert('RGB')
+                img_rgb = np.array(img_pil)
+            except Exception as e:
+                print(f"[ERRO] Falha ao ler imagem {caminho_imagem}: {e}")
+                return {
+                    'resultado': resultado,
+                    'ground_truth': ground_truth,
+                    'visualizacao': None
+                }
         
         altura, largura = img_rgb.shape[:2]
         
@@ -89,7 +122,10 @@ class VisualizadorServidor:
         # Imagem com predicao
         img_pred = self._desenhar_predicao(img_rgb.copy(), resultado, ground_truth, largura, altura)
         axes[2].imshow(img_pred)
-        titulo_pred = f"Predicao: {resultado['class_name']} ({resultado['confidence']*100:.1f}%)"
+        try:
+            titulo_pred = f"Predicao: {resultado['class_name']} ({resultado['confidence']*100:.1f}%)"
+        except Exception:
+            titulo_pred = "Predicao"
         axes[2].set_title(titulo_pred, fontsize=12)
         axes[2].axis('off')
         
@@ -107,8 +143,10 @@ class VisualizadorServidor:
         nome_arquivo = f"analise_{nome_base}_{timestamp}.png"
         caminho_saida = os.path.join(salvar_em, nome_arquivo)
         
-        plt.savefig(caminho_saida, dpi=200, bbox_inches='tight')
-        plt.close()  # Importante: fechar para liberar memoria
+        try:
+            plt.savefig(caminho_saida, dpi=200, bbox_inches='tight')
+        finally:
+            plt.close()  # Importante: fechar para liberar memoria
         
         print(f"Visualizacao salva: {caminho_saida}")
         
@@ -274,10 +312,20 @@ Ground Truth: {len(ground_truth)} nodulos anotados"""
             max_imagens: Limite de imagens (None = todas)
         """
         print(f"Analisando pasta completa: {pasta}")
+
+        if not os.path.isdir(pasta):
+            print(f"ERRO: Pasta não encontrada: {pasta}")
+            return []
         
         # Encontrar imagens
         extensoes = ('.jpg', '.jpeg', '.png', '.bmp')
-        imagens = [f for f in os.listdir(pasta) if f.lower().endswith(extensoes)]
+        try:
+            entradas = os.listdir(pasta)
+        except Exception as e:
+            print(f"ERRO ao listar pasta {pasta}: {e}")
+            return []
+
+        imagens = [f for f in entradas if f.lower().endswith(extensoes)]
         
         if max_imagens:
             imagens = imagens[:max_imagens]
@@ -292,12 +340,13 @@ Ground Truth: {len(ground_truth)} nodulos anotados"""
             
             try:
                 analise = self.analisar_com_marcacoes(caminho_img, output_dir)
-                resultados.append({
-                    'imagem': img_nome,
-                    'resultado': analise['resultado'],
-                    'ground_truth': analise['ground_truth'],
-                    'visualizacao': analise['visualizacao']
-                })
+                if analise and analise.get('visualizacao'):
+                    resultados.append({
+                        'imagem': img_nome,
+                        'resultado': analise['resultado'],
+                        'ground_truth': analise['ground_truth'],
+                        'visualizacao': analise['visualizacao']
+                    })
             except Exception as e:
                 print(f"ERRO ao processar {img_nome}: {e}")
         
@@ -381,9 +430,18 @@ def main():
     else:
         # Padrao: analisar pasta de teste
         pasta_padrao = "dataset_balanced/test"
+        pasta_fallback = "dataset_balanced_final/test"
+        alvo = None
         if os.path.exists(pasta_padrao):
-            print(f"Analisando pasta padrao: {pasta_padrao}")
-            viz.analisar_pasta_completa(pasta_padrao, args.output, args.max_images or 20)
+            alvo = pasta_padrao
+        elif os.path.exists(pasta_fallback):
+            alvo = pasta_fallback
+        elif os.path.exists(os.path.join('..', pasta_fallback)):
+            alvo = os.path.join('..', pasta_fallback)
+
+        if alvo:
+            print(f"Analisando pasta padrao: {alvo}")
+            viz.analisar_pasta_completa(alvo, args.output, args.max_images or 20)
         else:
             print("Nenhuma entrada especificada e pasta padrao nao encontrada")
             print("Uso:")
