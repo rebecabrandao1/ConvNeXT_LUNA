@@ -4,30 +4,36 @@ Versao otimizada sem GUI interativa, apenas salva visualizacoes
 """
 
 import os
-import cv2
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')  # Backend nao-interativo para servidor
 import matplotlib.pyplot as plt
-from PIL import Image, ImageDraw, ImageFont
-# Import robusto do detector
-try:
-    from use_model import LunaNodeDetector
-except Exception:
-    # Fallback antigo (caso exista em outro ambiente)
-    from use_model_servidor import LunaNodeDetector  # type: ignore
+from PIL import Image, ImageDraw, ImageFont, ImageFile
+# Tolerar imagens JPEG truncadas em ambientes de servidor
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 import json
 from datetime import datetime
 import argparse
 
 class VisualizadorServidor:
-    def __init__(self, model_path):
+    def __init__(self, model_path, prefer_cpu: bool = False):
         """
         Inicializa visualizador para servidor.
         
         Args:
             model_path: Caminho para modelo treinado
+            prefer_cpu: Se True, desativa CUDA via variavel de ambiente antes de carregar o modelo
         """
+        # Preparar ambiente antes de carregar o detector
+        if prefer_cpu:
+            os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
+        # Importar o detector depois de configurar o ambiente (evita inicializar CUDA antes)
+        try:
+            from use_model import LunaNodeDetector  # type: ignore
+        except Exception:
+            from use_model_servidor import LunaNodeDetector  # type: ignore
+
         self.detector = LunaNodeDetector(model_path)
         
         # Configurar cores
@@ -77,25 +83,16 @@ class VisualizadorServidor:
         ground_truth = self._carregar_ground_truth(caminho_imagem)
         
         # 3. Carregar imagem
-        img_rgb = None
         try:
-            img_cv = cv2.imread(caminho_imagem, cv2.IMREAD_COLOR)
-            if img_cv is not None:
-                img_rgb = cv2.cvtColor(img_cv, cv2.COLOR_BGR2RGB)
-        except Exception:
-            img_cv = None
-
-        if img_rgb is None:
-            try:
-                img_pil = Image.open(caminho_imagem).convert('RGB')
-                img_rgb = np.array(img_pil)
-            except Exception as e:
-                print(f"[ERRO] Falha ao ler imagem {caminho_imagem}: {e}")
-                return {
-                    'resultado': resultado,
-                    'ground_truth': ground_truth,
-                    'visualizacao': None
-                }
+            img_pil = Image.open(caminho_imagem).convert('RGB')
+            img_rgb = np.array(img_pil)
+        except Exception as e:
+            print(f"[ERRO] Falha ao ler imagem {caminho_imagem}: {e}")
+            return {
+                'resultado': resultado,
+                'ground_truth': ground_truth,
+                'visualizacao': None
+            }
         
         altura, largura = img_rgb.shape[:2]
         
@@ -405,6 +402,7 @@ def main():
                        help='Diretorio para salvar visualizacoes')
     parser.add_argument('--max-images', type=int,
                        help='Maximo de imagens para processar')
+    parser.add_argument('--cpu', action='store_true', help='Forca execucao em CPU (desativa CUDA)')
     
     args = parser.parse_args()
     
@@ -416,7 +414,7 @@ def main():
         return
     
     # Inicializar visualizador
-    viz = VisualizadorServidor(args.model)
+    viz = VisualizadorServidor(args.model, prefer_cpu=args.cpu)
     
     if args.image and os.path.exists(args.image):
         # Imagem individual
