@@ -1,0 +1,1064 @@
+{
+  "total_images": 96,
+  "with_nodules": 20,
+  "without_nodules": 76,
+  "nodule_percentage": 20.833333333333336,
+  "results": [
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999985694885254,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999985694885254,
+        "com_nodulo": 1.4553152141161263e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105756658031515062000744821260_027.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999988079071045,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999988079071045,
+        "com_nodulo": 1.1856277524202596e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105756658031515062000744821260_039.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999821186065674,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999821186065674,
+        "com_nodulo": 1.7858008504845202e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105756658031515062000744821260_063.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999955892562866,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999955892562866,
+        "com_nodulo": 4.431428806128679e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105756658031515062000744821260_089.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999990463256836,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999990463256836,
+        "com_nodulo": 9.648008472140646e-07
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105756658031515062000744821260_107.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9982507824897766,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9982507824897766,
+        "com_nodulo": 0.0017491423059254885
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_017.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9976081848144531,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9976081848144531,
+        "com_nodulo": 0.0023918095976114273
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_021.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999980926513672,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999980926513672,
+        "com_nodulo": 1.885503934317967e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_057.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9998904466629028,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9998904466629028,
+        "com_nodulo": 0.00010950273281196132
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_070.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999866485595703,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999866485595703,
+        "com_nodulo": 1.3362163372221403e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_086.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.999997615814209,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.999997615814209,
+        "com_nodulo": 2.366356284255744e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_093.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9998360872268677,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9998360872268677,
+        "com_nodulo": 0.0001639038819121197
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_017.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.7233944535255432,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 0.2766055762767792,
+        "com_nodulo": 0.7233944535255432
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_075.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999954700469971,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999954700469971,
+        "com_nodulo": 4.510744020080892e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_135.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999960660934448,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999960660934448,
+        "com_nodulo": 3.92285619454924e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_145.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999977350234985,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999977350234985,
+        "com_nodulo": 2.227984396085958e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_153.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999997615814209,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 1.926914592331741e-07,
+        "com_nodulo": 0.9999997615814209
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_66.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999998807907104,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 1.1817925127388662e-07,
+        "com_nodulo": 0.9999998807907104
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_67.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9989914298057556,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9989914298057556,
+        "com_nodulo": 0.0010085520334541798
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_003.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9980408549308777,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9980408549308777,
+        "com_nodulo": 0.001959184417501092
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_060.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9997498393058777,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9997498393058777,
+        "com_nodulo": 0.00025017649750225246
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_170.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999996423721313,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 3.681452653836459e-07,
+        "com_nodulo": 0.9999996423721313
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_187.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999969005584717,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 3.125012199234334e-06,
+        "com_nodulo": 0.9999969005584717
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_193.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999988079071045,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999988079071045,
+        "com_nodulo": 1.2510371334428783e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_342.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999955892562866,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999955892562866,
+        "com_nodulo": 4.452724624570692e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_378.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999922513961792,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999922513961792,
+        "com_nodulo": 7.755294973321725e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_499.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999972581863403,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999972581863403,
+        "com_nodulo": 2.7501716886035865e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.122763913896761494371822656720_010.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999957084655762,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999957084655762,
+        "com_nodulo": 4.347425146988826e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.122763913896761494371822656720_015.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.999995231628418,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.999995231628418,
+        "com_nodulo": 4.738520146929659e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.122763913896761494371822656720_050.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9996193647384644,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9996193647384644,
+        "com_nodulo": 0.0003806594468187541
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_080.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9969320297241211,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9969320297241211,
+        "com_nodulo": 0.003067905083298683
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_095.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999775886535645,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999775886535645,
+        "com_nodulo": 2.2447700757766142e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_102.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999927282333374,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999927282333374,
+        "com_nodulo": 7.317103154491633e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_106.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999977350234985,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999977350234985,
+        "com_nodulo": 2.2930396426090738e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_129.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9488383531570435,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 0.05116161331534386,
+        "com_nodulo": 0.9488383531570435
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_40.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999809265136719,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999809265136719,
+        "com_nodulo": 1.9015222278540023e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126121460017257137098781143514_047.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999920129776001,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999920129776001,
+        "com_nodulo": 8.026670911931433e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126121460017257137098781143514_085.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999010562896729,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999010562896729,
+        "com_nodulo": 9.88854153547436e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_132.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.999971866607666,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.999971866607666,
+        "com_nodulo": 2.8161874070065096e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_418.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999992847442627,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 6.795426088501699e-07,
+        "com_nodulo": 0.9999992847442627
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_522.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999995231628418,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 5.340552320376446e-07,
+        "com_nodulo": 0.9999995231628418
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_527.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999991655349731,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 8.137209874803375e-07,
+        "com_nodulo": 0.9999991655349731
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_528.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999992847442627,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999992847442627,
+        "com_nodulo": 6.807958357057942e-07
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.128023902651233986592378348912_026.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999986886978149,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999986886978149,
+        "com_nodulo": 1.2938597819811548e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.128023902651233986592378348912_051.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999992847442627,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999992847442627,
+        "com_nodulo": 6.637934575337567e-07
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.128023902651233986592378348912_126.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999983310699463,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999983310699463,
+        "com_nodulo": 1.6900859236557153e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.129055977637338639741695800950_132.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.8458318114280701,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 0.15416821837425232,
+        "com_nodulo": 0.8458318114280701
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.129055977637338639741695800950_372.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999985694885254,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999985694885254,
+        "com_nodulo": 1.451315256417729e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.129055977637338639741695800950_420.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999985694885254,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999985694885254,
+        "com_nodulo": 1.4553152141161263e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105756658031515062000744821260_027.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999988079071045,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999988079071045,
+        "com_nodulo": 1.1856277524202596e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105756658031515062000744821260_039.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999821186065674,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999821186065674,
+        "com_nodulo": 1.7858008504845202e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105756658031515062000744821260_063.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999955892562866,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999955892562866,
+        "com_nodulo": 4.431428806128679e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105756658031515062000744821260_089.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999990463256836,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999990463256836,
+        "com_nodulo": 9.648008472140646e-07
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.105756658031515062000744821260_107.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9982507824897766,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9982507824897766,
+        "com_nodulo": 0.0017491423059254885
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_017.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9976081848144531,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9976081848144531,
+        "com_nodulo": 0.0023918095976114273
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_021.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999980926513672,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999980926513672,
+        "com_nodulo": 1.885503934317967e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_057.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9998904466629028,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9998904466629028,
+        "com_nodulo": 0.00010950273281196132
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_070.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999866485595703,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999866485595703,
+        "com_nodulo": 1.3362163372221403e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_086.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.999997615814209,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.999997615814209,
+        "com_nodulo": 2.366356284255744e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.108197895896446896160048741492_093.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9998360872268677,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9998360872268677,
+        "com_nodulo": 0.0001639038819121197
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_017.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.7233944535255432,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 0.2766055762767792,
+        "com_nodulo": 0.7233944535255432
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_075.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999954700469971,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999954700469971,
+        "com_nodulo": 4.510744020080892e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_135.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999960660934448,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999960660934448,
+        "com_nodulo": 3.92285619454924e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_145.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999977350234985,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999977350234985,
+        "com_nodulo": 2.227984396085958e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_153.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999997615814209,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 1.926914592331741e-07,
+        "com_nodulo": 0.9999997615814209
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_66.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999998807907104,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 1.1817925127388662e-07,
+        "com_nodulo": 0.9999998807907104
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.109002525524522225658609808059_67.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9989914298057556,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9989914298057556,
+        "com_nodulo": 0.0010085520334541798
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_003.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9980408549308777,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9980408549308777,
+        "com_nodulo": 0.001959184417501092
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_060.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9997498393058777,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9997498393058777,
+        "com_nodulo": 0.00025017649750225246
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_170.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999996423721313,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 3.681452653836459e-07,
+        "com_nodulo": 0.9999996423721313
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_187.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999969005584717,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 3.125012199234334e-06,
+        "com_nodulo": 0.9999969005584717
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_193.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999988079071045,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999988079071045,
+        "com_nodulo": 1.2510371334428783e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_342.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999955892562866,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999955892562866,
+        "com_nodulo": 4.452724624570692e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_378.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999922513961792,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999922513961792,
+        "com_nodulo": 7.755294973321725e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.111172165674661221381920536987_499.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999972581863403,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999972581863403,
+        "com_nodulo": 2.7501716886035865e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.122763913896761494371822656720_010.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999957084655762,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999957084655762,
+        "com_nodulo": 4.347425146988826e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.122763913896761494371822656720_015.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.999995231628418,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.999995231628418,
+        "com_nodulo": 4.738520146929659e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.122763913896761494371822656720_050.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9996193647384644,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9996193647384644,
+        "com_nodulo": 0.0003806594468187541
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_080.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9969320297241211,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9969320297241211,
+        "com_nodulo": 0.003067905083298683
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_095.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999775886535645,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999775886535645,
+        "com_nodulo": 2.2447700757766142e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_102.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999927282333374,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999927282333374,
+        "com_nodulo": 7.317103154491633e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_106.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999977350234985,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999977350234985,
+        "com_nodulo": 2.2930396426090738e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_129.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9488383531570435,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 0.05116161331534386,
+        "com_nodulo": 0.9488383531570435
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.124154461048929153767743874565_40.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999809265136719,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999809265136719,
+        "com_nodulo": 1.9015222278540023e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126121460017257137098781143514_047.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999920129776001,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999920129776001,
+        "com_nodulo": 8.026670911931433e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126121460017257137098781143514_085.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999010562896729,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999010562896729,
+        "com_nodulo": 9.88854153547436e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_132.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.999971866607666,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.999971866607666,
+        "com_nodulo": 2.8161874070065096e-05
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_418.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999992847442627,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 6.795426088501699e-07,
+        "com_nodulo": 0.9999992847442627
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_522.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999995231628418,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 5.340552320376446e-07,
+        "com_nodulo": 0.9999995231628418
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_527.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.9999991655349731,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 8.137209874803375e-07,
+        "com_nodulo": 0.9999991655349731
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354_528.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999992847442627,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999992847442627,
+        "com_nodulo": 6.807958357057942e-07
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.128023902651233986592378348912_026.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999986886978149,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999986886978149,
+        "com_nodulo": 1.2938597819811548e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.128023902651233986592378348912_051.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999992847442627,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999992847442627,
+        "com_nodulo": 6.637934575337567e-07
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.128023902651233986592378348912_126.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999983310699463,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999983310699463,
+        "com_nodulo": 1.6900859236557153e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.129055977637338639741695800950_132.jpg"
+    },
+    {
+      "predicted_class": 1,
+      "class_name": "Com n\u00f3dulo",
+      "confidence": 0.8458318114280701,
+      "has_nodule": true,
+      "probabilities": {
+        "sem_nodulo": 0.15416821837425232,
+        "com_nodulo": 0.8458318114280701
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.129055977637338639741695800950_372.jpg"
+    },
+    {
+      "predicted_class": 0,
+      "class_name": "Sem n\u00f3dulo",
+      "confidence": 0.9999985694885254,
+      "has_nodule": false,
+      "probabilities": {
+        "sem_nodulo": 0.9999985694885254,
+        "com_nodulo": 1.451315256417729e-06
+      },
+      "image_path": "dataset_balanced\\test\\img_1.3.6.1.4.1.14519.5.2.1.6279.6001.129055977637338639741695800950_420.jpg"
+    }
+  ]
+}

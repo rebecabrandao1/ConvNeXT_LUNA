@@ -1,0 +1,13 @@
+{
+  "data_dir": "dataset_balanced",
+  "model_name": "facebook/convnextv2-tiny-1k-224",
+  "batch_size": 4,
+  "num_epochs": 100,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "patience": 30,
+  "num_workers": 0,
+  "output_dir": "outputs_balanced",
+  "save_every": 10,
+  "experiment_name": "balanced-luna-20251013-223746"
+}
