@@ -82,10 +82,7 @@ class BalancedLunaTrainer:
         
         train_dataset, val_dataset, test_dataset = create_balanced_datasets(
             self.config['data_dir'],
-            processor=self.processor,
-            train_split=0.7,
-            val_split=0.2,
-            test_split=0.1
+            image_processor=self.processor
         )
         
         # Dataloaders
