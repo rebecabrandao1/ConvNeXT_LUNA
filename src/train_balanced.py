@@ -80,10 +80,13 @@ class BalancedLunaTrainer:
         """Configura os datasets e dataloaders."""
         print("Carregando datasets balanceados...")
         
-        train_dataset, val_dataset, test_dataset = create_balanced_datasets(
+        train_dataset, test_dataset = create_balanced_datasets(
             self.config['data_dir'],
             image_processor=self.processor
         )
+        
+        # Usar o test_dataset como validação por enquanto
+        val_dataset = test_dataset
         
         # Dataloaders
         self.train_loader = DataLoader(
