@@ -84,7 +84,9 @@ class LunaNodeDetector:
             dict: Resultado da predicao
         """
         # Carregar e preprocessar imagem
-        image = Image.open(image_path).convert('L')  # Grayscale
+        # Processamento correto: L -> RGB (mesmo do treinamento)
+        img = Image.open(image_path).convert('L')  # Grayscale
+        image = img.convert('RGB')  # Converter para RGB
         
         # Processar
         inputs = self.processor(image, return_tensors="pt")
@@ -133,7 +135,9 @@ class LunaNodeDetector:
             # Carregar e processar imagens
             images = []
             for path in batch_paths:
-                image = Image.open(path).convert('L')
+                # Processamento correto: L -> RGB (mesmo do treinamento)
+                img = Image.open(path).convert('L')
+                image = img.convert('RGB')
                 images.append(image)
             
             # Processar lote
