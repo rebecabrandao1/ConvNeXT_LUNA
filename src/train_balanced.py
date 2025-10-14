@@ -18,6 +18,10 @@ from tqdm import tqdm
 import numpy as np
 from datetime import datetime
 import argparse
+import csv
+import matplotlib
+matplotlib.use('Agg')  # non-interactive backend for servers
+import matplotlib.pyplot as plt
 
 from dataset_balanced import create_balanced_datasets
 
@@ -44,9 +48,90 @@ class BalancedLunaTrainer:
         self._setup_data()
         self._setup_optimizer()
         
-        # Historico de treinamento
-        self.train_history = []
-        self.val_history = []
+        # Historico de treinamento (lista de dicts por epoca)
+        self.history = []
+        self._init_logging()
+
+    def _init_logging(self):
+        """Inicializa arquivos de log de treinamento (JSON/CSV)."""
+        os.makedirs(self.config['output_dir'], exist_ok=True)
+        self.history_json_path = os.path.join(self.config['output_dir'], 'training_history.json')
+        self.history_csv_path = os.path.join(self.config['output_dir'], 'training_history.csv')
+        # Se CSV nao existir, escrever cabecalho
+        if not os.path.exists(self.history_csv_path):
+            with open(self.history_csv_path, 'w', newline='', encoding='utf-8') as f:
+                writer = csv.writer(f)
+                writer.writerow([
+                    'epoch', 'lr',
+                    'train_loss', 'train_accuracy', 'train_precision', 'train_recall', 'train_f1',
+                    'val_loss', 'val_accuracy', 'val_precision', 'val_recall', 'val_f1',
+                    'timestamp'
+                ])
+        # Iniciar/limpar JSON ao comecar novo treino
+        # Dica: se quiser acumular rodadas, comente as 2 linhas abaixo
+        with open(self.history_json_path, 'w', encoding='utf-8') as f:
+            json.dump({
+                'config': self.config,
+                'dataset_stats': {},
+                'epochs': []
+            }, f, indent=2)
+
+    def _flush_history_json(self):
+        """Grava o historico completo (epochs) em JSON."""
+        data = {
+            'config': self.config,
+            'dataset_stats': self.dataset_stats,
+            'epochs': self.history
+        }
+        with open(self.history_json_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2)
+
+    def _append_csv_row(self, row):
+        with open(self.history_csv_path, 'a', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow(row)
+
+    def _save_curves(self):
+        """Gera curvas de treinamento (loss/acc/f1) em PNG."""
+        if not self.history:
+            return
+        epochs = [h['epoch'] for h in self.history]
+        train_loss = [h['train']['loss'] for h in self.history]
+        val_loss = [h['val']['loss'] for h in self.history]
+        train_acc = [h['train']['accuracy'] for h in self.history]
+        val_acc = [h['val']['accuracy'] for h in self.history]
+        train_f1 = [h['train']['f1'] for h in self.history]
+        val_f1 = [h['val']['f1'] for h in self.history]
+
+        plt.figure(figsize=(12, 8))
+        # Loss
+        plt.subplot(2, 2, 1)
+        plt.plot(epochs, train_loss, label='Train Loss')
+        plt.plot(epochs, val_loss, label='Val Loss')
+        plt.xlabel('Epoch')
+        plt.ylabel('Loss')
+        plt.title('Loss por época')
+        plt.legend()
+        # Accuracy
+        plt.subplot(2, 2, 2)
+        plt.plot(epochs, train_acc, label='Train Acc')
+        plt.plot(epochs, val_acc, label='Val Acc')
+        plt.xlabel('Epoch')
+        plt.ylabel('Accuracy')
+        plt.title('Accuracy por época')
+        plt.legend()
+        # F1
+        plt.subplot(2, 2, 3)
+        plt.plot(epochs, train_f1, label='Train F1')
+        plt.plot(epochs, val_f1, label='Val F1')
+        plt.xlabel('Epoch')
+        plt.ylabel('F1')
+        plt.title('F1 por época')
+        plt.legend()
+        plt.tight_layout()
+        out_path = os.path.join(self.config['output_dir'], 'training_curves.png')
+        plt.savefig(out_path, dpi=150)
+        plt.close()
     
     def _setup_model(self):
         """Configura o modelo ConvNeXtV2."""
@@ -320,9 +405,27 @@ class BalancedLunaTrainer:
             # Validar
             val_metrics = self.validate(epoch)
             
-            # Salvar historico
-            self.train_history.append(train_metrics)
-            self.val_history.append(val_metrics)
+            # Learning rate atual (primeiro grupo)
+            current_lr = self.scheduler.get_last_lr()[0]
+
+            # Registrar historico desta epoca
+            epoch_entry = {
+                'epoch': epoch + 1,
+                'lr': current_lr,
+                'timestamp': datetime.now().isoformat(timespec='seconds'),
+                'train': train_metrics,
+                'val': val_metrics
+            }
+            self.history.append(epoch_entry)
+            # Persistir JSON e CSV a cada epoca
+            self._flush_history_json()
+            self._append_csv_row([
+                epoch + 1,
+                current_lr,
+                train_metrics['loss'], train_metrics['accuracy'], train_metrics['precision'], train_metrics['recall'], train_metrics['f1'],
+                val_metrics['loss'], val_metrics['accuracy'], val_metrics['precision'], val_metrics['recall'], val_metrics['f1'],
+                epoch_entry['timestamp']
+            ])
             
             # Imprimir resultados
             print(f"Resultados epoca {epoch + 1}:")
@@ -354,6 +457,13 @@ class BalancedLunaTrainer:
         
         print(f"Treinamento concluido! Melhor F1: {best_f1:.4f}")
         print(f"Modelos salvos em: {self.config['output_dir']}")
+
+        # Gerar curvas ao final do treinamento
+        try:
+            self._save_curves()
+            print(f"Curvas salvas em: {os.path.join(self.config['output_dir'], 'training_curves.png')}")
+        except Exception as e:
+            print(f"Aviso: falha ao gerar curvas: {e}")
         
         return best_f1
 
@@ -397,6 +507,9 @@ def main():
     # Treinar
     trainer = BalancedLunaTrainer(config)
     best_f1 = trainer.train()
+    # Sinalizar onde estao os logs
+    print(f"Historico JSON: {os.path.join(config['output_dir'], 'training_history.json')}")
+    print(f"Historico CSV: {os.path.join(config['output_dir'], 'training_history.csv')}")
     
     print(f"\nTreinamento finalizado!")
     print(f"   Melhor F1-Score: {best_f1:.4f}")
