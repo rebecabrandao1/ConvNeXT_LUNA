@@ -5,6 +5,7 @@ from torchvision.models.detection import MaskRCNN
 from torchvision.models.detection.anchor_utils import AnchorGenerator
 from torchvision.ops.feature_pyramid_network import FeaturePyramidNetwork
 from transformers import ConvNextV2Model
+from transformers import AutoImageProcessor
 
 class ConvNextV2FPNBackbone(nn.Module):
     def __init__(self, model_name="facebook/convnextv2-tiny-1k-224"):
@@ -72,3 +73,8 @@ def create_mask_rcnn_model(num_classes=2):
     )
     
     return model
+def create_image_processor():
+    """
+    Cria o processador de imagens necessário para o ConvNeXt V2.
+    """
+    return AutoImageProcessor.from_pretrained("facebook/convnextv2-tiny-1k-224")
