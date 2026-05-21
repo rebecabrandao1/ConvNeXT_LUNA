@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 from scipy.interpolate import interp1d
+import torchvision.transforms.functional as F # <-- ADICIONADO AQUI
 
 from convnext.model import create_mask_rcnn_model
 from convnext.dataset import create_luna_dataset
@@ -40,6 +41,13 @@ def calculate_mask_metrics(pred_mask, true_mask):
 def collate_fn(batch):
     return tuple(zip(*batch))
 
+# --- O NOSSO TRUQUE (PROCESSADOR FALSO) ---
+class CustomProcessor:
+    def __call__(self, img, return_tensors="pt"):
+        # Faz exatamente o que o predict.py fez, mantendo a imagem de 0 a 1!
+        return {"pixel_values": F.to_tensor(img).unsqueeze(0)}
+# ------------------------------------------
+
 def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thresh=0.5):
     device = torch.device(device_name)
     print(f"Carregando modelo e avaliando no dispositivo: {device}")
@@ -57,9 +65,11 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
 
     model = model.to(device)
     
-    # --- CIRURGIA AQUI: Removido o image_processor que cegava a rede ---
-    ds = create_luna_dataset(folder=data_folder, image_processor=None, annotation_format='auto')
+    # --- USANDO O NOSSO PROCESSADOR FALSO AQUI ---
+    processor = CustomProcessor()
+    ds = create_luna_dataset(folder=data_folder, image_processor=processor, annotation_format='auto')
     loader = DataLoader(ds, batch_size=1, shuffle=False, collate_fn=collate_fn)
+    # ---------------------------------------------
     
     total_gt_nodules = 0
     total_images = len(ds)
@@ -194,8 +204,6 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
     print(f"\nGráficos de avaliação salvos em: {plot_file}")
 
 if __name__ == '__main__':
-    # --- CIRURGIA AQUI: Apontando para o modelo novo (Época 38) ---
     modelo = 'outputs/detector_epoch_38.pth'
-    
     pasta_teste = 'dataset/dataset_10-15mm_test' 
     evaluate_model(modelo, pasta_teste)
