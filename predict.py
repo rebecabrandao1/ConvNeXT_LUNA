@@ -86,7 +86,7 @@ def predict_and_visualize(model, image_path, image_processor, device, save_path,
 def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
   
-    PESO_TREINADO = 'outputs/detector_epoch_400.pth' 
+    PESO_TREINADO = 'outputs/detector_epoch_38.pth' 
     PASTA_TESTE = "dataset/dataset_10-15mm_test"
     
     # Cria uma pasta nova para não misturar os resultados
