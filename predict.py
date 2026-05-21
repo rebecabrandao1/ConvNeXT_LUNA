@@ -32,6 +32,17 @@ def predict_and_visualize(model, image_path, image_processor, device, save_path,
     with torch.no_grad():
         prediction = model(image_tensor)[0] 
 
+    # --- RAIO-X DO MODELO ---
+    print("\n[DEBUG] O que o modelo cuspiu:")
+    print(f"Total de caixas iniciais: {len(prediction['boxes'])}")
+    if len(prediction['scores']) > 0:
+        print(f"Top 3 Scores (Confiança): {prediction['scores'][:3].cpu().numpy()}")
+        print(f"Caixa 1 (Coordenadas): {prediction['boxes'][0].cpu().numpy()}")
+    # ------------------------
+
+    scores = prediction['scores'].cpu().numpy()
+        
+
     scores = prediction['scores'].cpu().numpy()
     keep = scores > threshold
     
