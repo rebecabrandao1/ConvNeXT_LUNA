@@ -5,7 +5,7 @@ import torch
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 # Hiperparâmetros de Treinamento
-BATCH_SIZE = 8
+BATCH_SIZE = 4
 NUM_EPOCHS = 50  # Aumentado para convergência do detector 
 LR = 1e-4        # Valor base do AdamW/AdaBeliefz para Mask R-CNN [cite: 720]
 
