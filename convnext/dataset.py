@@ -133,22 +133,40 @@ class LunaDataset(Dataset):
                 
                 if os.path.exists(txt_path):
                     try:
+                        img_annotations = []
                         with open(txt_path) as f:
-                            label_str = f.read().strip()
-                            if label_str:
-                                label = int(label_str.split()[0])
-                            else:
-                                label = 0
+                            lines = f.readlines()
+                            for line in lines:
+                                parts = line.strip().split()
+                                if len(parts) >= 5:
+                                    # Formato esperado: class x_center y_center width height
+                                    # Importante: Se os valores no TXT forem normalizados (0 a 1),
+                                    # multiplique pelo tamanho da imagem (ex: 512)
+                                    label = int(parts[0])
+                                    x_c, y_c, w, h = map(float, parts[1:])
+                                    
+                                    # Converter para COCO format [x, y, w, h] para manter compatibilidade
+                                    # Se os dados forem normalizados:
+                                    img_w, img_h = 512, 512 # Ajuste para o tamanho real das suas imagens
+                                    abs_x = (x_c - w/2) * img_w
+                                    abs_y = (y_c - h/2) * img_h
+                                    abs_w = w * img_w
+                                    abs_h = h * img_h
+                                    
+                                    img_annotations.append({
+                                        'bbox': [abs_x, abs_y, abs_w, abs_h],
+                                        'category_id': label
+                                    })
                         
                         self.samples.append({
                             'image_path': img_path,
-                            'label': label,
-                            'category_name': f'class_{label}',
-                            'annotations': [],
+                            'label': label if img_annotations else 0,
+                            'category_name': f'class_{label}' if img_annotations else 'background',
+                            'annotations': img_annotations, # AGORA TEM ANOTAÇÕES!
                             'image_info': {'file_name': fname}
                         })
                     except Exception as e:
-                        print(f"Erro ao ler {txt_path}: {e}")
+                        print(f" Erro ao processar {txt_path}: {e}")
         
         print(f" Carregadas {len(self.samples)} imagens do formato TXT")
 
