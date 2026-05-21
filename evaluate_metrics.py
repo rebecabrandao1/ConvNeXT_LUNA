@@ -56,6 +56,8 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
             model.load_state_dict(checkpoint)
             
         print(f"Pesos do modelo '{model_path}' carregados com sucesso!")
+
+    model = model.to(device)
     
     # Prepara dataset
     processor = create_image_processor()
@@ -64,7 +66,7 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
     
     total_gt_nodules = 0
     total_images = len(ds)
-    all_predictions = []  # Para armazenar: (score, is_tp)
+    all_predictions = []  
     
     mask_ious = []
     mask_dices = []
