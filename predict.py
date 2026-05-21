@@ -83,13 +83,13 @@ def main():
   
     PESO_TREINADO = 'outputs/detector_epoch_400.pth' 
  
-    IMAGEM_TESTE = "dataset/dataset_10-15mm_test/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.106719103982792863757268101375_184.jpg"
+    IMAGEM_TESTE = "dataset/dataset_10-15mm_test/img_1.3.6.1.4.1.14519.5.2.1.6279.6001.168737928729363683423228050295_177.jpg"
     
     try:
         model = load_model(PESO_TREINADO, device)
         image_processor = create_image_processor()
         
-        predict_and_visualize(model, IMAGEM_TESTE, image_processor, device, threshold=0.5)
+        predict_and_visualize(model, IMAGEM_TESTE, image_processor, device, threshold=0.1)
         
     except FileNotFoundError as e:
         print(f"ERRO: Arquivo não encontrado. Verifique os caminhos.\n{e}")
