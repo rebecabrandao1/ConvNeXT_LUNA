@@ -4,7 +4,6 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-# Imports do seu projeto
 import config 
 from convnext.model import create_mask_rcnn_model, create_image_processor
 from convnext.dataset import create_luna_dataset # Certifique-se de que esta função existe no seu dataset.py
@@ -75,6 +74,8 @@ def main():
         save_path = os.path.join(config.SAVE_MODEL_PATH, f"detector_epoch_{epoch+1}.pth")
         torch.save(model.state_dict(), save_path)
         print(f"Modelo salvo em: {save_path}")
+        print(f"Boxes: {targets[0]['boxes']}")
+        print(f"Labels: {targets[0]['labels']}")
 
 if __name__ == "__main__":
     main()
