@@ -72,6 +72,7 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
     print(f"Iniciando inferência em {total_images} imagens...")
     
     # --- LOOP DE INFERÊNCIA ---
+    model.eval()
     with torch.no_grad():
         for images, targets in tqdm(loader, desc="Avaliando"):
             images = [img.to(device) for img in images]
