@@ -213,10 +213,10 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
     print(f"\nGráficos de avaliação salvos em: {plot_file}")
 
 if __name__ == '__main__':
-    # Adapte os caminhos conforme sua rotina de teste!
+    # Configurar de acordo com a rotina de teste
     modelo = os.path.join(config.SAVE_MODEL_PATH, 'best_model.pth')
     
-    # Usando seu json LUNA16 pra teste. Ex:
+    # Base de teste utilizada para a avaliação
     pasta_teste = 'dataset/dataset_10-15mm_test' # Altere de acordo com o desejado via argumento futuramente.
     
     evaluate_model(modelo, pasta_teste)

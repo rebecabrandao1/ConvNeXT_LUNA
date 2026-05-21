@@ -116,8 +116,8 @@ class LunaDataset(Dataset):
             print(f"Categorias encontradas: {list(categories.values())}")
             
         except Exception as e:
-            print(f"❌ Erro ao carregar COCO: {e}")
-            print("🔄 Tentando formato TXT...")
+            print(f" Erro ao carregar COCO: {e}")
+            print("Tentando formato TXT...")
             self.annotation_format = 'txt'
             self._load_txt_annotations()
     
@@ -148,7 +148,7 @@ class LunaDataset(Dataset):
                             'image_info': {'file_name': fname}
                         })
                     except Exception as e:
-                        print(f"⚠️ Erro ao ler {txt_path}: {e}")
+                        print(f"Erro ao ler {txt_path}: {e}")
         
         print(f" Carregadas {len(self.samples)} imagens do formato TXT")
 
@@ -186,7 +186,7 @@ class LunaDataset(Dataset):
                         ImageDraw.Draw(m_img).polygon(ann['segmentation'][0], outline=1, fill=1)
                         mask = np.array(m_img)
                     else:
-                        # Fallback se não não tiver máscara e você quiser simular uma via bounding box
+                        # Fallback na ausência de máscara para simulação via bounding box
                         mask[int(y):int(y+h), int(x):int(x+w)] = 1
                     masks.append(mask)
         
@@ -251,7 +251,7 @@ class LunaDataset(Dataset):
         return labeled_distribution
     
     def visualize_sample(self, idx, show_annotations=True):
-        """Visualiza uma amostra com suas anotações (se COCO)."""
+        """Visualiza amostra com as respectivas anotações (se COCO)."""
         import matplotlib.pyplot as plt
         import matplotlib.patches as patches
         
@@ -289,7 +289,7 @@ class LunaDataset(Dataset):
         plt.show()
         
         # Mostrar informações detalhadas
-        print(f"📋 Informações da amostra {idx}:")
+        print(f"Informações da amostra {idx}:")
         print(f"   Arquivo: {sample_info['filename']}")
         print(f"   Classe: {sample_info['label']} ({sample_info['category_name']})")
         print(f"   Formato: {sample_info['annotation_format']}")

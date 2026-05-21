@@ -1,116 +1,80 @@
 import os
 import torch
+import torch.optim as optim
 from torch.utils.data import DataLoader
-from torch.optim import AdamW
 from tqdm import tqdm
-import argparse
 
+# Imports do seu projeto
+import config 
 from convnext.model import create_mask_rcnn_model, create_image_processor
-from convnext.dataset import LunaDataset, create_luna_dataset
-import config
+from convnext.dataset import create_luna_dataset # Certifique-se de que esta função existe no seu dataset.py
 
 def collate_fn(batch):
+    """
+    Necessário para desempacotar batches de tamanhos variáveis (detecção).
+    """
     return tuple(zip(*batch))
 
-def train_epoch(model, train_loader, optimizer, device):
+def get_optimizer(model, lr=1e-4):
+    # AdamW é o padrão para ConvNeXt V2
+    return optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01)
+
+def train_one_epoch(model, optimizer, data_loader, device):
     model.train()
     total_loss = 0
-    for images, targets in tqdm(train_loader, desc="Training"):
-        optimizer.zero_grad()
-        images = [img.to(device) for img in images]
+ 
+    pbar = tqdm(data_loader, desc="Treinando")
+    for images, targets in pbar:
+        images = list(image.to(device) for image in images)
         targets = [{k: v.to(device) for k, v in t.items()} for t in targets]
-        
-        # O Torchvision MaskRCNN retorna um dicionário de perdas durante o `.train()`
-        loss_dict = model(images, targets) 
-        
+
+        loss_dict = model(images, targets)
         losses = sum(loss for loss in loss_dict.values())
+
+        optimizer.zero_grad()
         losses.backward()
         optimizer.step()
         
         total_loss += losses.item()
-    return total_loss / len(train_loader)
+        pbar.set_postfix(loss=losses.item())
 
-def evaluate(model, test_loader, device):
-    model.eval()
-    # Para métricas de detecção o ideal seria mAP etc, mas para exemplo vamos simplificar
-    # Apenas mostrando como capturar output de eval do MaskRCNN
-    with torch.no_grad():
-        for images, targets in tqdm(test_loader, desc="Evaluating"):
-            images = [img.to(device) for img in images]
-            outputs = model(images)
-            # outputs é uma lista de dicionários contendo boxes, labels, masks e scores
-            # Implementar COCO metrics ou similar seria o ideal aqui.
-    return 0.0 # acc temporariamenre retornando zero
+    return total_loss / len(data_loader)
 
-def main(args):
-    # Configurar device
-    device = torch.device(config.DEVICE)
-    print(f"Usando device: {device}")
-    
-    # Criar processador de imagens e modelo
+def main():
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print(f"Iniciando treino no dispositivo: {device}")
+
+    # 1. Preparar os Datasets e Loaders
     image_processor = create_image_processor()
-    model = create_mask_rcnn_model(
-        num_classes=config.NUM_LABELS
-    )
-    model.to(device)
+    
 
-    # Carregar datasets com suporte a COCO
-    train_ds = create_luna_dataset(
-        folder=args.train_folder or config.TRAIN_FOLDER,
-        image_processor=image_processor,
-        annotation_format=args.annotation_format,
-        coco_file=args.train_coco_file
+    train_ds = create_luna_dataset(folder=config.TRAIN_FOLDER, image_processor=image_processor)
+    test_ds = create_luna_dataset(folder=config.TEST_FOLDER, image_processor=image_processor)
+
+    train_loader = DataLoader(
+        train_ds, 
+        batch_size=config.BATCH_SIZE, 
+        shuffle=True, 
+        num_workers=2, 
+        collate_fn=collate_fn
     )
-    test_ds = create_luna_dataset(
-        folder=args.test_folder or config.TEST_FOLDER,
-        image_processor=image_processor,
-        annotation_format=args.annotation_format,
-        coco_file=args.test_coco_file
-    )
+
+    # 2. Inicializar Modelo e Otimizador
+    model = create_mask_rcnn_model(num_classes=config.NUM_LABELS)
+    model.to(device)
     
-    train_loader = DataLoader(train_ds, batch_size=config.BATCH_SIZE, shuffle=True, collate_fn=collate_fn)
-    test_loader = DataLoader(test_ds, batch_size=config.BATCH_SIZE, shuffle=False, collate_fn=collate_fn)
+    optimizer = get_optimizer(model, lr=config.LR)
     
-    # Otimizador
-    optimizer = AdamW(model.parameters(), lr=config.LR)
-    
-    # Loop de treinamento
-    best_acc = 0
+    os.makedirs(config.SAVE_MODEL_PATH, exist_ok=True)
+
     for epoch in range(config.NUM_EPOCHS):
-        # Treinar
-        avg_loss = train_epoch(model, train_loader, optimizer, device)
-        print(f"Epoch {epoch+1}/{config.NUM_EPOCHS}: Loss médio = {avg_loss:.4f}")
-        
-        # Avaliar
-        acc = evaluate(model, test_loader, device)
-        print(f"Validação: Acurácia = {acc*100:.2f}%")
-        
-        # Salvar melhor modelo
-        if acc > best_acc:
-            best_acc = acc
-            torch.save({
-                'epoch': epoch,
-                'model_state_dict': model.state_dict(),
-                'optimizer_state_dict': optimizer.state_dict(),
-                'accuracy': acc,
-            }, os.path.join(config.SAVE_MODEL_PATH, 'best_model.pth'))
-            print(f"Novo melhor modelo salvo com acurácia: {acc*100:.2f}%")
+        print(f"\n--- Época {epoch+1}/{config.NUM_EPOCHS} ---")
+        loss = train_one_epoch(model, optimizer, train_loader, device)
+        print(f"Loss Médio da Época: {loss:.4f}")
+       
+        save_path = os.path.join(config.SAVE_MODEL_PATH, f"detector_epoch_{epoch+1}.pth")
+        torch.save(model.state_dict(), save_path)
+        print(f"Modelo salvo em: {save_path}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Treinar modelo ConvNeXtV2')
-    parser.add_argument('--train_folder', type=str, help='Pasta com dados de treino')
-    parser.add_argument('--test_folder', type=str, help='Pasta com dados de teste')
-    parser.add_argument('--pretrained', action='store_true', default=True, 
-                       help='Usar modelo pré-treinado')
-    
-    # Argumentos para anotações COCO
-    parser.add_argument('--annotation_format', type=str, default='auto', 
-                       choices=['auto', 'txt', 'coco'],
-                       help='Formato das anotações: auto, txt ou coco')
-    parser.add_argument('--train_coco_file', type=str, 
-                       help='Arquivo COCO para dados de treino')
-    parser.add_argument('--test_coco_file', type=str,
-                       help='Arquivo COCO para dados de teste')
-    
-    args = parser.parse_args()
-    main(args)
+    main()
