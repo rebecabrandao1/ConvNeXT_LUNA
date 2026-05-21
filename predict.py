@@ -27,17 +27,16 @@ def predict_and_visualize(model, image_path, image_processor, device, save_path,
     """Faz a predição e salva a imagem na pasta de resultados."""
     img = Image.open(image_path).convert("RGB")
     processed = image_processor(img, return_tensors="pt")
-    image_tensor = processed["pixel_values"].to(device)
+    image_tensor = processed["pixel_values"].squeeze(0).to(device)
 
     with torch.no_grad():
-        prediction = model(image_tensor)[0] 
+        prediction = model([image_tensor])[0]
 
     # --- RAIO-X DO MODELO ---
     print("\n[DEBUG] O que o modelo cuspiu:")
     print(f"Total de caixas iniciais: {len(prediction['boxes'])}")
     if len(prediction['scores']) > 0:
-        print(f"Top 3 Scores (Confiança): {prediction['scores'][:3].cpu().numpy()}")
-        print(f"Caixa 1 (Coordenadas): {prediction['boxes'][0].cpu().numpy()}")
+        print(f"Score máximo: {prediction['scores'].max().item():.4f}")
     # ------------------------
 
     scores = prediction['scores'].cpu().numpy()

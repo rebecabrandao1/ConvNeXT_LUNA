@@ -133,21 +133,22 @@ class LunaDataset(Dataset):
                 
                 if os.path.exists(txt_path):
                     try:
+                        # ✅ pega tamanho real
+                        with Image.open(img_path) as im:
+                            img_w, img_h = im.size
+
                         img_annotations = []
                         with open(txt_path) as f:
                             lines = f.readlines()
                             for line in lines:
                                 parts = line.strip().split()
                                 if len(parts) >= 5:
-                                    # Formato esperado: class x_center y_center width height
-                                    # Importante: Se os valores no TXT forem normalizados (0 a 1),
-                                    # multiplique pelo tamanho da imagem (ex: 512)
                                     label = int(parts[0])
+                                    if label == 0:
+                                        label = 1  # 0 é background no MaskRCNN
+
                                     x_c, y_c, w, h = map(float, parts[1:])
                                     
-                                    # Converter para COCO format [x, y, w, h] para manter compatibilidade
-                                    # Se os dados forem normalizados:
-                                    img_w, img_h = 512, 512 # Ajuste para o tamanho real das suas imagens
                                     abs_x = (x_c - w/2) * img_w
                                     abs_y = (y_c - h/2) * img_h
                                     abs_w = w * img_w
@@ -157,12 +158,12 @@ class LunaDataset(Dataset):
                                         'bbox': [abs_x, abs_y, abs_w, abs_h],
                                         'category_id': label
                                     })
-                        
+                    
                         self.samples.append({
                             'image_path': img_path,
                             'label': label if img_annotations else 0,
                             'category_name': f'class_{label}' if img_annotations else 'background',
-                            'annotations': img_annotations, # AGORA TEM ANOTAÇÕES!
+                            'annotations': img_annotations,
                             'image_info': {'file_name': fname}
                         })
                     except Exception as e:
@@ -190,11 +191,8 @@ class LunaDataset(Dataset):
             for ann in sample['annotations']:
                 if 'bbox' in ann:
                     x, y, w, h = ann['bbox']
-                    # O Mask R-CNN espera caixas [x1, y1, x2, y2]
-                    # Nota: Caso use o image_processor do Hugging Face para dar resize,
-                    # certifique-se de ajustar matematicamente o x, y, x+w, y+h para a nova escala!
                     boxes.append([x, y, x + w, y + h])
-                    labels.append(sample['label'])
+                    labels.append(int(ann.get('category_id', sample['label'])))
                     
                     # Gerar a máscara (LUNA16)
                     mask = np.zeros((img_np.shape[0], img_np.shape[1]), dtype=np.uint8)

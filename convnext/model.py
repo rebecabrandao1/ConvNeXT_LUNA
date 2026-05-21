@@ -77,4 +77,9 @@ def create_image_processor():
     """
     Cria o processador de imagens necessário para o ConvNeXt V2.
     """
-    return AutoImageProcessor.from_pretrained("facebook/convnextv2-tiny-1k-224")
+    return AutoImageProcessor.from_pretrained(
+        "facebook/convnextv2-tiny-1k-224",
+        do_resize=False,
+        do_rescale=True,
+        do_normalize=False
+    )

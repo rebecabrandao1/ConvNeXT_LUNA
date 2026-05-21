@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 import config 
 from convnext.model import create_mask_rcnn_model, create_image_processor
-from convnext.dataset import create_luna_dataset # Certifique-se de que esta função existe no seu dataset.py
+from convnext.dataset import create_luna_dataset
 
 def collate_fn(batch):
     """
@@ -45,16 +45,15 @@ def main():
 
     # 1. Preparar os Datasets e Loaders
     image_processor = create_image_processor()
-    
 
     train_ds = create_luna_dataset(folder=config.TRAIN_FOLDER, image_processor=image_processor)
-    test_ds = create_luna_dataset(folder=config.TEST_FOLDER, image_processor=image_processor)
 
     train_loader = DataLoader(
         train_ds, 
         batch_size=config.BATCH_SIZE, 
         shuffle=True, 
-        num_workers=2, 
+        num_workers=2,
+        pin_memory=True if device.type == 'cuda' else False,
         collate_fn=collate_fn
     )
 
@@ -72,10 +71,13 @@ def main():
         print(f"Loss Médio da Época: {loss:.4f}")
        
         save_path = os.path.join(config.SAVE_MODEL_PATH, f"detector_epoch_{epoch+1}.pth")
-        torch.save(model.state_dict(), save_path)
+        torch.save({
+            'epoch': epoch + 1,
+            'model_state_dict': model.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict(),
+            'loss': loss
+        }, save_path)
         print(f"Modelo salvo em: {save_path}")
-        print(f"Boxes: {targets[0]['boxes']}")
-        print(f"Labels: {targets[0]['labels']}")
 
 if __name__ == "__main__":
     main()
