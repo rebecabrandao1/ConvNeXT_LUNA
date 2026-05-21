@@ -48,13 +48,14 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
     model = create_mask_rcnn_model(num_classes=config.NUM_LABELS)
     if os.path.exists(model_path):
         checkpoint = torch.load(model_path, map_location=device)
-        model.load_state_dict(checkpoint['model_state_dict'])
-        print(f"Pesos do modelo '{model_path}' carregados com sucesso!")
-    else:
-        print(f"AVISO: Arquivo {model_path} nao encontrado. Usando pesos aleatorios/iniciais para teste do script.")
         
-    model.to(device)
-    model.eval()
+        # Verifica se é um pacote completo ou se já são os pesos diretos
+        if 'model_state_dict' in checkpoint:
+            model.load_state_dict(checkpoint['model_state_dict'])
+        else:
+            model.load_state_dict(checkpoint)
+            
+        print(f"Pesos do modelo '{model_path}' carregados com sucesso!")
     
     # Prepara dataset
     processor = create_image_processor()
