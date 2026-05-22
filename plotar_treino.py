@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 
-# Caminho para o arquivo que guardou o texto do terminal
 arquivo_log = 'nohup.out' 
 
 epocas = []
@@ -19,7 +18,6 @@ try:
             epocas.append(len(train_loss))
 
     if len(train_loss) > 0:
-        # Configura o visual do gráfico para ficar parecido com o do DETR
         plt.figure(figsize=(8, 6))
         plt.plot(epocas, train_loss, color='#1f77b4', linewidth=2, label='Treino (ConvNeXt V2)')
         

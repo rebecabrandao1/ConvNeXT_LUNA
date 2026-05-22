@@ -25,7 +25,7 @@ def load_model(weights_path, device):
     model.eval() 
     return model
 
-def predict_and_visualize(model, image_path, device, save_path, threshold=0.1):
+def predict_and_visualize(model, image_path, device, save_path, threshold=0.8):
     """Faz a predição e salva a imagem na pasta de resultados."""
     img = Image.open(image_path).convert("RGB")
     
@@ -75,46 +75,59 @@ def predict_and_visualize(model, image_path, device, save_path, threshold=0.1):
                     color='red', fontsize=12, weight='bold',
                     bbox=dict(facecolor='white', alpha=0.7, edgecolor='none', pad=1))
             
-            # --- Desenhar Máscara ---
+            # --- Desenhar Máscara (Apenas Contorno) ---
             binary_mask = mask > 0.5
-            mask_layer = np.zeros((*binary_mask.shape, 4))
-            mask_layer[binary_mask] = [1, 0, 0, 0.4] 
-            ax.imshow(mask_layer)
+            
+            # O ax.contour desenha uma linha exatamente na divisa entre o 0 e o 1
+            ax.contour(binary_mask, colors='red', linewidths=1.5, levels=[0.5])
 
     ax.axis('off')
     plt.tight_layout()
     
     plt.savefig(save_path, dpi=300)
-    plt.close(fig) # CRUCIAL: Libera a memória após salvar!
+    plt.close(fig) 
 
 def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
   
     PESO_TREINADO = 'outputs/detector_epoch_38.pth' 
-    PASTA_TESTE = "dataset/dataset_10-15mm_test"
     
-    PASTA_RESULTADOS = "resultados_inferencia"
-    os.makedirs(PASTA_RESULTADOS, exist_ok=True)
+    # --- LISTA DE PASTAS PARA INFERÊNCIA ---
+    pastas_teste = {
+        "10-15mm": "dataset/dataset_10-15mm_test",
+        "5-10mm":  "dataset/dataset_5-10mm_test",
+        "menor_5mm": "dataset/dataset_menor_5mm_test"
+    }
     
     try:
         model = load_model(PESO_TREINADO, device)
         
-        imagens = glob.glob(os.path.join(PASTA_TESTE, "*.jpg"))
-        total_imagens = len(imagens)
-        
-        print(f"\nIniciando inferência em {total_imagens} imagens...")
-        print(f"Os resultados serão salvos na pasta: {PASTA_RESULTADOS}/")
-        print("-" * 50)
-        
-        for idx, img_path in enumerate(imagens, 1):
-            nome_arquivo = os.path.basename(img_path)
-            caminho_salvar = os.path.join(PASTA_RESULTADOS, f"pred_{nome_arquivo}")
+        for nome_teste, pasta_origem in pastas_teste.items():
+            print(f"\n\n{'='*50}")
+            print(f" INICIANDO INFERÊNCIA: {nome_teste}")
+            print(f"{'='*50}")
             
-            print(f"[{idx}/{total_imagens}] Processando: {nome_arquivo}")
-            # image_processor removido daqui também
-            predict_and_visualize(model, img_path, device, caminho_salvar, threshold=0.1)
+            if not os.path.exists(pasta_origem):
+                print(f"Aviso: A pasta '{pasta_origem}' não foi encontrada. Pulando...")
+                continue
+
+            pasta_resultados = f"resultados_inferencia_{nome_teste}"
+            os.makedirs(pasta_resultados, exist_ok=True)
             
-        print("\n=== Concluído! Todas as imagens foram processadas. ===")
+            imagens = glob.glob(os.path.join(pasta_origem, "*.jpg"))
+            total_imagens = len(imagens)
+            
+            print(f"Encontradas {total_imagens} imagens. Salvando em: {pasta_resultados}/")
+            
+            for idx, img_path in enumerate(imagens, 1):
+                nome_arquivo = os.path.basename(img_path)
+                caminho_salvar = os.path.join(pasta_resultados, f"pred_{nome_arquivo}")
+                
+                print(f"[{idx}/{total_imagens}] Processando: {nome_arquivo}")
+                
+                predict_and_visualize(model, img_path, device, caminho_salvar, threshold=0.8)
+                
+        print("\n=== Concluído! Todas as inferências foram processadas e separadas por pasta. ===")
         
     except FileNotFoundError as e:
         print(f"ERRO: Arquivo ou pasta não encontrado. Verifique os caminhos.\n{e}")
