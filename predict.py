@@ -95,8 +95,9 @@ def main():
     # --- LISTA DE PASTAS PARA INFERÊNCIA ---
     pastas_teste = {
         "10-15mm": "dataset/dataset_10-15mm_test",
-        "5-10mm":  "dataset/dataset_5-10mm_test",
-        "menor_5mm": "dataset/dataset_menor_5mm_test"
+        "15mm": "dataset/dataset_15mm_test",
+        "6-10mm": "dataset/dataset_6-10mm_test",
+        "6mm": "dataset/dataset_6mm_test"
     }
     
     try:
