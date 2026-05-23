@@ -152,10 +152,10 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
     
     if len(fps_per_scan) > 0:
         froc_interp = interp1d(fps_per_scan, recalls, kind='previous', bounds_error=False, fill_value=(0, recalls[-1]))
-        sensitivities_at_luna_fps = froc_interp(luna_fp_points)
-        lambda_metric = np.mean(sensitivities_at_luna_fps)
+        sensitivities_at_luna_fp_points = froc_interp(luna_fp_points)
+        lambda_metric = np.mean(sensitivities_at_luna_fp_points)
     else:
-        sensitivities_at_luna_fps = np.zeros_like(luna_fp_points)
+        sensitivities_at_luna_fp_points = np.zeros_like(luna_fp_points)
         lambda_metric = 0
 
     print("=======================================")
@@ -174,7 +174,7 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
     print(" 3. MÉTRICAS CLÍNICAS (LUNA16)")
     print("=======================================")
     print(f" Lambda (Λ)   : {lambda_metric:.4f}")
-    for fp_val, sens in zip(luna_fp_points, sensitivities_at_luna_fps):
+    for fp_val, sens in zip(luna_fp_points, sensitivities_at_luna_fp_points):
         print(f"   Sensibilidade @ {fp_val} FPs/scan = {sens:.4f}")
         
     plt.figure(figsize=(12, 5))
@@ -189,7 +189,7 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
     
     plt.subplot(1, 2, 2)
     plt.plot(fps_per_scan, recalls, 'r-')
-    plt.plot(luna_fp_points, sensitivities_at_luna_fps, 'ko', label=f'Lambda (Λ) = {lambda_metric:.3f}')
+    plt.plot(luna_fp_points, sensitivities_at_luna_fp_points, 'ko', label=f'Lambda (Λ) = {lambda_metric:.3f}')
     plt.xscale('log', base=2)
     plt.xticks(luna_fp_points, [str(v) for v in luna_fp_points])
     plt.xlabel('Falsos Positivos por Scan (FPs/Scan)')
@@ -211,5 +211,7 @@ if __name__ == '__main__':
         "6-10mm": "dataset/dataset_6-10mm_test",
         "6mm": "dataset/dataset_6mm_test"
     }
-     
-    evaluate_model(modelo, pastas_teste)
+
+    for name, folder in pastas_teste.items():
+        print(f"\n=== Avaliando conjunto: {name} -> {folder} ===")
+        evaluate_model(modelo, folder)
