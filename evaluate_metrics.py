@@ -204,6 +204,12 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
     print(f"\nGráficos de avaliação salvos em: {plot_file}")
 
 if __name__ == '__main__':
-    modelo = 'outputs/detector_epoch_38.pth'
-    pasta_teste = 'dataset/dataset_10-15mm_test' 
-    evaluate_model(modelo, pasta_teste)
+    modelo = 'outputs/detector_epoch_400.pth'
+    pastas_teste = {
+        "10-15mm": "dataset/dataset_10-15mm_test",
+        "15mm": "dataset/dataset_15mm_test",
+        "6-10mm": "dataset/dataset_6-10mm_test",
+        "6mm": "dataset/dataset_6mm_test"
+    }
+     
+    evaluate_model(modelo, pastas_teste)
