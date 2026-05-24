@@ -2,17 +2,17 @@ import os
 import glob
 import torch
 import numpy as np
+import matplotlib.subplots
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from PIL import Image
-import torchvision.transforms.functional as F # <-- ADICIONADO AQUI
+import torchvision.transforms.functional as F
 
 import config
 from convnext.model import create_mask_rcnn_model
 
 def load_model(weights_path, device):
     print(f"Carregando pesos de: {weights_path}")
-    # Nota: Não precisamos mais do create_image_processor aqui
     model = create_mask_rcnn_model(num_classes=config.NUM_LABELS)
     
     checkpoint = torch.load(weights_path, map_location=device)
@@ -25,26 +25,41 @@ def load_model(weights_path, device):
     model.eval() 
     return model
 
-def predict_and_visualize(model, image_path, device, save_path, threshold=0.8):
-    """Faz a predição e salva a imagem na pasta de resultados."""
+# --- FUNÇÃO NOVA: LER O GROUND TRUTH ---
+def ler_ground_truth_yolo(txt_path, img_width, img_height):
+    """Lê as anotações originais em formato YOLO (.txt) e converte para pixels."""
+    gt_boxes = []
+    if os.path.exists(txt_path):
+        with open(txt_path, 'r') as f:
+            for linha in f:
+                partes = linha.strip().split()
+                if len(partes) >= 5:
+                    # Formato YOLO: classe x_centro y_centro largura altura
+                    _, x_c, y_c, w, h = map(float, partes[:5])
+                    
+                    # Desfaz a normalização multiplicando pelo tamanho real da imagem
+                    largura = w * img_width
+                    altura = h * img_height
+                    x_centro = x_c * img_width
+                    y_centro = y_c * img_height
+                    
+                    xmin = x_centro - (largura / 2)
+                    ymin = y_centro - (altura / 2)
+                    xmax = x_centro + (largura / 2)
+                    ymax = y_centro + (altura / 2)
+                    
+                    gt_boxes.append([xmin, ymin, xmax, ymax])
+    return gt_boxes
+
+def predict_and_visualize(model, image_path, txt_path, device, save_path, threshold=0.8):
+    """Faz a predição e desenha GT (azul) e Modelo (vermelho)."""
     img = Image.open(image_path).convert("RGB")
+    img_width, img_height = img.size
     
-    # --- A CIRURGIA FOI AQUI ---
-    # Usamos o método nativo do PyTorch que mantém os valores entre 0.0 e 1.0,
-    # exatamente como o seu test_mask_dataset.py faz no treino!
     image_tensor = F.to_tensor(img).to(device)
-    # ---------------------------
 
     with torch.no_grad():
-        # Mask R-CNN espera uma lista de tensores
         prediction = model([image_tensor])[0]
-
-    # --- RAIO-X DO MODELO ---
-    print("\n[DEBUG] O que o modelo cuspiu:")
-    print(f"Total de caixas iniciais: {len(prediction['boxes'])}")
-    if len(prediction['scores']) > 0:
-        print(f"Score máximo: {prediction['scores'].max().item():.4f}")
-    # ------------------------
 
     scores = prediction['scores'].cpu().numpy()
     keep = scores > threshold
@@ -56,43 +71,50 @@ def predict_and_visualize(model, image_path, device, save_path, threshold=0.8):
     fig, ax = plt.subplots(1, 1, figsize=(10, 10))
     ax.imshow(img)
     
-    # Se não achou nada, apenas salva a imagem original e fecha
+    # --- 1. DESENHAR O GROUND TRUTH (EM AZUL) ---
+    gt_boxes = ler_ground_truth_yolo(txt_path, img_width, img_height)
+    for gt_box in gt_boxes:
+        xmin, ymin, xmax, ymax = gt_box
+        # Retângulo azul tracejado para diferenciar bem
+        rect_gt = patches.Rectangle((xmin, ymin), xmax - xmin, ymax - ymin, 
+                                    linewidth=3, edgecolor='blue', facecolor='none', linestyle='--')
+        ax.add_patch(rect_gt)
+        ax.text(xmin, ymin - 8, "GT", color='blue', fontsize=12, weight='bold')
+
+    # --- 2. DESENHAR AS PREDIÇÕES DO MODELO (EM VERMELHO) ---
     if len(boxes) == 0:
-        ax.set_title("Nenhum Nódulo Detectado", color='green', fontsize=14)
+        pass # Mantém apenas a imagem com o GT se o modelo não achar nada
     else:
         for i in range(len(boxes)):
             box = boxes[i]
             mask = masks[i, 0] 
             score = scores[i]
             
-            # --- Desenhar Bounding Box ---
             xmin, ymin, xmax, ymax = box
             rect = patches.Rectangle((xmin, ymin), xmax - xmin, ymax - ymin, 
                                      linewidth=2, edgecolor='red', facecolor='none')
             ax.add_patch(rect)
             
-            ax.text(xmin, ymin - 5, f"{score*100:.1f}%", 
+            # Movimentei a porcentagem para baixo (ymax) para não ficar em cima do letreiro "GT"
+            ax.text(xmin, ymax + 15, f"{score*100:.1f}%", 
                     color='red', fontsize=12, weight='bold',
                     bbox=dict(facecolor='white', alpha=0.7, edgecolor='none', pad=1))
             
-            # --- Desenhar Máscara (Apenas Contorno) ---
+            # Contorno da máscara
             binary_mask = mask > 0.5
-            
-            # O ax.contour desenha uma linha exatamente na divisa entre o 0 e o 1
             ax.contour(binary_mask, colors='red', linewidths=1.5, levels=[0.5])
 
     ax.axis('off')
     plt.tight_layout()
-    
     plt.savefig(save_path, dpi=300)
     plt.close(fig) 
 
 def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
   
+    # ⚠️ MUDE AQUI PARA O PESO CORRETO SE ESTIVER USANDO O DA ÉPOCA 400!
     PESO_TREINADO = 'outputs/detector_epoch_38.pth' 
     
-    # --- LISTA DE PASTAS PARA INFERÊNCIA ---
     pastas_teste = {
         "10-15mm": "dataset/dataset_10-15mm_test",
         "15mm": "dataset/dataset_15mm_test",
@@ -112,7 +134,8 @@ def main():
                 print(f"Aviso: A pasta '{pasta_origem}' não foi encontrada. Pulando...")
                 continue
 
-            pasta_resultados = f"resultados_inferencia_{nome_teste}"
+            # Nome da pasta final ajustado para sabermos que tem o GT desenhado
+            pasta_resultados = f"resultados_inferencia_com_gt_{nome_teste}"
             os.makedirs(pasta_resultados, exist_ok=True)
             
             imagens = glob.glob(os.path.join(pasta_origem, "*.jpg"))
@@ -124,11 +147,15 @@ def main():
                 nome_arquivo = os.path.basename(img_path)
                 caminho_salvar = os.path.join(pasta_resultados, f"pred_{nome_arquivo}")
                 
+                # --- O SEGREDO ESTÁ AQUI ---
+                # Pega o mesmo nome da imagem, mas troca .jpg por .txt para achar a anotação
+                txt_path = os.path.splitext(img_path)[0] + ".txt"
+                
                 print(f"[{idx}/{total_imagens}] Processando: {nome_arquivo}")
                 
-                predict_and_visualize(model, img_path, device, caminho_salvar, threshold=0.8)
+                predict_and_visualize(model, img_path, txt_path, device, caminho_salvar, threshold=0.8)
                 
-        print("\n=== Concluído! Todas as inferências foram processadas e separadas por pasta. ===")
+        print("\n=== Concluído! Todas as inferências foram processadas. ===")
         
     except FileNotFoundError as e:
         print(f"ERRO: Arquivo ou pasta não encontrado. Verifique os caminhos.\n{e}")
