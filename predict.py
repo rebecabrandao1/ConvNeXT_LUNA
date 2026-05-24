@@ -2,7 +2,6 @@ import os
 import glob
 import torch
 import numpy as np
-import matplotlib.subplots
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from PIL import Image
