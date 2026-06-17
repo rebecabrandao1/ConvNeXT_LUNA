@@ -203,6 +203,13 @@ def evaluate_model(model_path, data_folder, device_name=config.DEVICE, iou_thres
     plt.savefig(plot_file)
     print(f"\nGráficos de avaliação salvos em: {plot_file}")
 
+
+    print("DADOS PARA O GRAFICO:")
+    print("recalls =", recalls.tolist())
+    print("precisions =", precisions.tolist())
+    print("fps_per_scan =", fps_per_scan.tolist())
+    print("sensitivities =", sensitivities_at_luna_fp_points.tolist())
+
 if __name__ == '__main__':
     modelo = 'outputs/detector_epoch_400.pth'
     pastas_teste = {
